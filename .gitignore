@@ -2,6 +2,9 @@
 .env
 config.js
 
+# Build artifacts
+node_modules/
+
 # Logs
 *.log
 
