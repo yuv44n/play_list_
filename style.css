@@ -1,0 +1,127 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  margin: 0;
+  min-height: 100vh;
+}
+#app {
+  max-width: 50%;
+  margin: 0px auto;
+  padding: 0px;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding: 16px 0;
+  padding-top: 8%;
+  margin-bottom: 20px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.heading {
+  flex: 1;
+}
+#tasklist-name {
+  margin: 0 0 8px 0;
+  font-size: 1.6em;
+  color: #39ff14;
+  letter-spacing: 1px;
+}
+.top-right {
+  margin-left: 16px;
+}
+.top-right button {
+  background: #39ff14;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.75em;
+  font-family: inherit;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.top-right button:hover {
+  background: #2ecc40;
+}
+.progress-wrapper {
+  
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#progress-container {
+  flex: 1;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+#progress-text {
+  color: #39ff14;
+  font-weight: bold;
+  font-size: 0.9em;
+  min-width: 40px;
+  text-align: right;
+}
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #39ff14;
+  transition: width 0.3s;
+}
+ol#task-list {
+  list-style: decimal inside;
+  padding: 0;
+  margin: 0;
+}
+.task-item {
+  font-size: 1em;
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 1;
+  color: #fff;
+  display: block;
+  line-height: 1.4;
+  word-wrap: break-word;
+  border: 1px solid transparent;
+}
+.task-item:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(57,255,20,0.3);
+}
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+  color: #39ff14;
+  background: rgba(57,255,20,0.1);
+}
+.video-number {
+  color: #39ff14;
+  font-weight: bold;
+  margin-right: 8px;
+}
+@media (max-width: 600px) {
+  #app {
+    max-width: 80%;
+  }
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .top-right {
+    margin: 12px 0 0 0;
+    align-self: flex-end;
+  }
+}
